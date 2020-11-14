@@ -1,30 +1,15 @@
 <template>
-    <button @click="toggleModalState">Open Modal</button>
-    <modal v-if="modalOption">
-        <p>Hello, I'm a modal window.</p>
-    </modal>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <HelloWorld msg="Hello Vue 3.0 + Vite" />
 </template>
 
 <script>
-import Modal from './views/Modal.vue'
-import { ref } from 'vue'
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-    components: {
-        Modal
-    },
-    setup() {
-        const modalOption = ref(false)
-        const toggleModalState = () => {
-            modalOption.value = !modalOption.value
-        }
-        return {
-            modalOption,
-            toggleModalState
-        }
-    }
+  name: 'App',
+  components: {
+    HelloWorld
+  }
 }
 </script>
-
-<style scoped>
-</style>
